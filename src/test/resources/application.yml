@@ -1,0 +1,20 @@
+
+app:
+  ftp:
+    client:
+      host: localhost
+      port: 10021
+      username: popa
+      password: 12345678
+
+spring:
+  jmx:
+    enabled: false
+  application.name: ftp-client
+  main.banner-mode: "off"
+
+logging:
+  pattern.console: "%clr(%d{yyyy-MM-dd HH:mm:ss.SSS}){faint} %clr([%thread]){cyan} %clr(${LOG_LEVEL_PATTERN:%5p}){magenta} %clr(:){faint} %m%n${LOG_EXCEPTION_CONVERSION_WORD:%wEx}"
+  level:
+    org.springframework:            ERROR
+    com.xxlabaza.test.ftp.client:   DEBUG

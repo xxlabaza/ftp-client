@@ -1,0 +1,15 @@
+version: '2'
+
+services:
+
+  ftp_server:
+    container_name: ftp_server
+    build:
+      context: ./
+      args:
+        USERNAME: 'popa'
+        PASSWORD: '12345678'
+    image:          'ulmart/ftp_server'
+    ports:
+      - '10021:21'
+      - '10100-10200:10100-10200'
